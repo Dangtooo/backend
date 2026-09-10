@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán giá nhà</title>
+</head>
+<body>
+    <h1>Dự đoán giá nhà</h1>
+
+    <form id="house-form">
+        <div>
+            <label for="area">Diện tích (m²):</label>
+            <input id="area" name="area" type="number" min="1" step="0.1" required>
+        </div>
+
+        <div>
+            <label for="bedrooms">Số phòng ngủ:</label>
+            <input id="bedrooms" name="bedrooms" type="number" min="0" step="1" required>
+        </div>
+
+        <div>
+            <label for="location">Khu vực:</label>
+            <select id="location" name="location" required>
+                <option value="">-- Chọn khu vực --</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcmc">TP. Hồ Chí Minh</option>
+                <option value="other">Khu vực khác</option>
+            </select>
+        </div>
+
+        <button type="submit">Dự đoán</button>
+    </form>
+
+    <p id="result" aria-live="polite"></p>
+
+    <script src="/static/house_form.js"></script>
+</body>
+</html>
